@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /user-ms
+  port: 8080
+
+spring:
+  liquibase:
+    enabled: true
+    drop-first: false
+    change-log: classpath:/liquibase/changelog-master.xml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: mypass
+    url: jdbc:postgresql://localhost:5432/user_db
+  main:
+    banner-mode: off
+  application:
+    name: user-ms
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    open-in-view: false

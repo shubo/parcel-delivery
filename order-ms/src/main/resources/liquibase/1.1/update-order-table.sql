@@ -1,0 +1,1 @@
+alter table order_pd add column courier varchar(50);
